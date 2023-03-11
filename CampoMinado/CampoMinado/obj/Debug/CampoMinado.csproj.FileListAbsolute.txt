@@ -1,0 +1,11 @@
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\bin\Debug\CampoMinado.exe.config
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\bin\Debug\CampoMinado.exe
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\bin\Debug\CampoMinado.pdb
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\obj\Debug\CampoMinado.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\obj\Debug\CampoMinado.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\obj\Debug\CampoMinado.Form1.resources
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\obj\Debug\CampoMinado.Properties.Resources.resources
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\obj\Debug\CampoMinado.csproj.GenerateResource.cache
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\obj\Debug\CampoMinado.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\obj\Debug\CampoMinado.exe
+C:\Users\User\OneDrive\Área de Trabalho\Gabriel\Campo Minado - C#\CampoMinado-CSharp\CampoMinado\CampoMinado\obj\Debug\CampoMinado.pdb
