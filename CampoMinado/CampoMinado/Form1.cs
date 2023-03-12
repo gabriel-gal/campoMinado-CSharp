@@ -34,7 +34,7 @@ namespace CampoMinado
             Controls.Add(lab);
         }
 
-        private void TelaInicial()
+        private void TelaInicial() 
         {
             Criador();
 
@@ -135,6 +135,7 @@ namespace CampoMinado
             but.Size = new System.Drawing.Size(211, 62);
             but.TabIndex = 2;
             but.Text = "Facil";
+            but.Click += new System.EventHandler(Jogo);
             but.UseVisualStyleBackColor = true;
             Controls.Add(but);
 
@@ -146,6 +147,7 @@ namespace CampoMinado
             but.Size = new System.Drawing.Size(211, 62);
             but.TabIndex = 4;
             but.Text = "Medio";
+            but.Click += new System.EventHandler(Jogo);
             but.UseVisualStyleBackColor = true;
             Controls.Add(but);
 
@@ -157,10 +159,82 @@ namespace CampoMinado
             but.Size = new System.Drawing.Size(211, 62);
             but.TabIndex = 5;
             but.Text = "Dificil";
+            but.Click += new System.EventHandler(Jogo);
             but.UseVisualStyleBackColor = true;
             Controls.Add(but);
         }
 
-        
+        private void Jogo(object sender, EventArgs e)
+        {
+            Controls.Clear();
+            Criador();
+
+            Button aux = (Button)sender;
+            int x = 0, y = 0, 
+                quantBomba = 0, tam = 0,        //tam = tamnho do botao
+                linha = 0,linhaAdd = 0,     //linhaAdd é a variavel cujo quanto de pix o novo botao vai se mover para ser inserido  
+                coluna = 0, colunaAdd = 0,      //colunaAdd é a variavel cujo quanto de pix o novo botao vai se mover para ser inserido
+                colunaInicial = 0, linhaInicial = 0,    //coluna e linha inicial é aonde a matriz ira começar, cada fase é diferente
+                bombaX, bombaY;
+
+            switch (aux.Text)
+            {
+                case "Facil":
+                    x = 8; y = 8; quantBomba = 10; 
+                    linhaAdd = 73; colunaAdd = 73;
+                    tam = 75 ;
+                    colunaInicial = 42;
+                    linhaInicial = 30;
+                    break;
+
+                case "Medio":
+                    x = 14; y = 14; quantBomba = 40; 
+                    linhaAdd = 37; colunaAdd = 37; 
+                    tam = 45;
+                    colunaInicial = 70;
+                    linhaInicial = 27;
+                    break;
+
+                case "Dificil":
+                    x = 20; y = 20; quantBomba = 99;
+                    linhaAdd = 27; colunaAdd = 27;
+                    tam = 30;
+                    colunaInicial = 60;
+                    linhaInicial = 30;
+                    break;
+            }
+
+            Button[,] but = new Button[x,y];
+            Random bomba = new Random();
+
+            for (int i = 0; i < y; i++)
+            {
+                for(int j = 0; j <x; j++)
+                {
+                    but[j,i] = new Button();
+                    but[j, i].Location = new System.Drawing.Point(colunaInicial + coluna, linhaInicial + linha);
+                    coluna = colunaAdd + coluna;
+                    but[j, i].Name = "livre";
+                    but[j, i].Size = new System.Drawing.Size(tam, tam);
+                    but[j, i].TabIndex = 0;
+                    but[j, i].Text = " ";
+                    but[j, i].UseVisualStyleBackColor = true;
+                    Controls.Add(but[j, i]);
+                }
+                linha = linhaAdd + linha;
+                coluna = 0;
+            }    //Cria os botões   
+
+            for (int a = 0; a < quantBomba; a++)
+            {
+                do
+                {
+                    bombaX = bomba.Next(0, x);
+                    bombaY = bomba.Next(0, y);
+                } while (but[bombaX, bombaY].Text == "bomba");
+                but[bombaX, bombaY].Text = "bomba";
+            }   //Adicionando as bombas 
+            
+        }
     }
 }
